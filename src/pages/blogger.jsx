@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
 import Paiensinando from '../assets/pai-ensinando-filho.png';
-import Logo from '@assets/logo.png'
+import Logo from '../assets/Logo.png';
 import Reunião from '../assets/reuniao_pais_escola.png';
 import Estudante from '../assets/estudando.png';
 import Aluno1 from '../assets/aluno.png';
@@ -70,7 +70,7 @@ const Bloguer = () => {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Navbar */}
-      <div className="fixed top-0 left-0 w-full flex justify-between items-center p-6 bg-white shadow-xl z-50">
+      <div className="fixed top-0 left-0 w-full flex justify-between items-center p-6 bg-white shadow-xl z-50 font-poppins font-semibold  ">
         <div className="flex items-center space-x-6">
           <img src={Logo} alt="Logo" className="h-10 w-auto" />
           <div className="hidden md:flex space-x-6">
