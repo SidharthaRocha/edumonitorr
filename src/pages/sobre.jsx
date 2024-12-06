@@ -69,40 +69,41 @@ const Sobre = () => {
       </div>
 
       {/* Mobile Menu */}
-      {isMenuOpen && (
-        <div className="fixed inset-0 bg-white z-50 flex flex-col items-center justify-center">
-          <button
-            onClick={() => setIsMenuOpen(false)}
-            className="absolute top-6 right-6 text-2xl text-purple-700 hover:text-purple-900 transition-colors duration-200"
-          >
-            &times;
-          </button>
+{isMenuOpen && (
+  <div className="fixed inset-0 bg-white z-50 flex flex-col items-center justify-center md:hidden">
+    <button
+      onClick={() => setIsMenuOpen(false)}
+      className="absolute top-6 right-6 text-2xl text-purple-700 hover:text-purple-900 transition-colors duration-200"
+    >
+      &times;
+    </button>
 
-          <nav className="flex flex-col items-center space-y-8">
-            <Link
-              to="/"
-              onClick={() => setIsMenuOpen(false)}
-              className="text-purple-700 text-2xl font-poppins font-semibold hover:bg-purple-800 hover:text-white px-6 py-2 rounded"
-            >
-              Home
-            </Link>
-            <Link
-              to="/blog"
-              onClick={() => setIsMenuOpen(false)}
-              className="text-purple-700 text-2xl font-poppins font-semibold hover:bg-purple-800 hover:text-white px-6 py-2 rounded"
-            >
-              Blog
-            </Link>
-            <Link
-              to="/sobre"
-              onClick={() => setIsMenuOpen(false)}
-              className="text-purple-700 text-2xl font-poppins font-semibold hover:bg-purple-800 hover:text-white px-6 py-2 rounded"
-            >
-              Sobre
-            </Link>
-          </nav>
-        </div>
-      )}
+    <nav className="flex flex-col items-center space-y-8">
+      <Link
+        to="/"
+        onClick={() => setIsMenuOpen(false)}
+        className="text-purple-700 text-2xl font-poppins font-semibold hover:bg-purple-800 hover:text-white px-6 py-2 rounded"
+      >
+        Home
+      </Link>
+      <Link
+        to="/blog"
+        onClick={() => setIsMenuOpen(false)}
+        className="text-purple-700 text-2xl font-poppins font-semibold hover:bg-purple-800 hover:text-white px-6 py-2 rounded"
+      >
+        Blog
+      </Link>
+      <Link
+        to="/sobre"
+        onClick={() => setIsMenuOpen(false)}
+        className="text-purple-700 text-2xl font-poppins font-semibold hover:bg-purple-800 hover:text-white px-6 py-2 rounded"
+      >
+        Sobre
+      </Link>
+    </nav>
+  </div>
+)}
+
 
       {/* Main Content */}
       <main className="flex-1 p-4 pt-20 mt-6"> {/* Added pt-20 here to add padding on top */}
