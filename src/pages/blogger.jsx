@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
 import Paiensinando from '../assets/pai-ensinando-filho.png';
-import Logo from '../assets/logo.png';
+import Logo from '@assets/logo.png'
 import Reunião from '../assets/reuniao_pais_escola.png';
 import Estudante from '../assets/estudando.png';
 import Aluno1 from '../assets/aluno.png';
