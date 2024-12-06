@@ -104,13 +104,8 @@ const Sobre = () => {
         </div>
       )}
 
-      {/* Header */}
-      <header className="bg-gradient-to-r from-blue-950 to-blue-700 p-6 text-white text-center animate__animated animate__fadeIn">
-        <h1 className="text-4xl font-bold">Sobre o Monitoramento Online</h1>
-      </header>
-
       {/* Main Content */}
-      <main className="flex-1 p-4 pt-12 mt-6">
+      <main className="flex-1 p-4 pt-20 mt-6"> {/* Added pt-20 here to add padding on top */}
         <div className="max-w-4xl mx-auto">
           <section className="mb-8 animate__animated animate__fadeInLeft">
             <h2 className="text-3xl font-bold text-purple-800 mb-4">

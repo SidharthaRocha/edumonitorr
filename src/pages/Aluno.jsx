@@ -61,7 +61,7 @@ const Aluno = () => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-purple-900 font-poppins">
       <motion.div
-        className="bg-white shadow-lg rounded-lg p-8 w-96 text-center"
+        className="bg-white shadow-lg rounded-lg p-8 w-96 sm:w-80 md:w-96 lg:w-1/3 text-center"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}

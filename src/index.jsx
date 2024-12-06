@@ -106,7 +106,7 @@ function Home() {
           </Link>
         </div>
         <div className="mt-8 md:mt-0 md:w-1/2">
-          <img src={celulardireita} alt="Imagem do celular" className="w-full h-auto rounded-xl shadow-lg" />
+          <img src={celulardireita} alt="Imagem do celular" className="w-full h-auto rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl" />
         </div>
       </div>
 
