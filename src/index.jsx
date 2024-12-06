@@ -93,7 +93,7 @@ function Home() {
       </div>
 
       {/* Hero Section */}
-      <div className="relative mt-20 bg-gradient-to-r from-purple-500 to-blue-500 text-white p-10 text-center md:flex md:items-center md:justify-between md:p-20 font-poppins font-semibold">
+      <div className="relative mt-20 bg-gradient-to-r from-purple-500 to-blue-500 text-white p-6 text-center md:flex md:items-center md:justify-between md:p-20 font-poppins font-semibold">
         <div className="md:w-1/2">
           <h1 className="text-3xl md:text-5xl font-extrabold leading-tight">
             Acompanhe o Desenvolvimento do Seu Filho
@@ -116,7 +116,7 @@ function Home() {
           <h2 className="text-3xl font-bold text-purple-800 mb-10">
             Como Funciona a Monitoria Online
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-4 md:px-0">
             {cards.map((card, index) => (
               <div
                 key={index}
