@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import Logo from '../assets/logo.png';
+import Logo from '../assets/Logo.png';
 
 const CadastroProfessor = () => {
   const [nome, setNome] = useState('');

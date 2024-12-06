@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import Logo from '../assets/logo.png'; // Altere para o caminho do seu logotipo
+import Logo from '../assets/Logo.png'; // Altere para o caminho do seu logotipo
 
 const CadastroAluno = () => {
   const [nome, setNome] = useState('');

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import Logo from '../assets/logo.png'; // Substitua pelo caminho do seu logo
+import Logo from '../assets/Logo.png'; // Substitua pelo caminho do seu logo
 import { FaChalkboardTeacher, FaUserGraduate, FaHome } from 'react-icons/fa';
 
 const Login = () => {
