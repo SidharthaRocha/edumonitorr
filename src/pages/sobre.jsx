@@ -70,7 +70,7 @@ const Sobre = () => {
 
       {/* Mobile Menu */}
 {isMenuOpen && (
-  <div className="fixed inset-0 bg-white z-50 flex flex-col items-center justify-center md:hidden">
+  <div className="fixed inset-0 bg-white z-50 flex flex-col items-center justify-center space-y-8">
     <button
       onClick={() => setIsMenuOpen(false)}
       className="absolute top-6 right-6 text-2xl text-purple-700 hover:text-purple-900 transition-colors duration-200"

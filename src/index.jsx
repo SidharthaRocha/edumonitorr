@@ -83,7 +83,7 @@ function Home() {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="fixed inset-0 bg-white z-40 flex flex-col items-center justify-center space-y-6 p-6">
+          <div className="fixed inset-0 bg-white z-50 flex flex-col items-center justify-center space-y-8">
             <Link to="/" className="text-purple-700 text-2xl hover:bg-purple-800 hover:text-white px-6 py-2 rounded" onClick={toggleMenu}>Home</Link>
             <Link to="/blog" className="text-purple-700 text-2xl hover:bg-purple-800 hover:text-white px-6 py-2 rounded" onClick={toggleMenu}>Blog</Link>
             <Link to="/sobre" className="text-purple-700 text-2xl hover:bg-purple-800 hover:text-white px-6 py-2 rounded" onClick={toggleMenu}>Sobre</Link>
