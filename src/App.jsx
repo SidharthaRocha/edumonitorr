@@ -4,7 +4,10 @@ import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import Blog from './pages/blogger';
 import Sobre from './pages/sobre';
 import AlunoProfessor from './pages/sistema-de-login';
+<<<<<<< HEAD
 import AlunoProfessor2 from './pages/sistema-de-login2';
+=======
+>>>>>>> 36c1b7b6466b0752465598448f3ffcf02bb15126
 import Informação from './pages/informação';
 import Professor from './pages/Professor'
 import CadastroProfessor from './pages/CadastroProfessor'
@@ -18,7 +21,11 @@ import DesempenhoProfessor from './pages/Professores/Desempenho';
 import NotificacoesProfessor from './pages/Professores/Notificações';
 import CalendarioProfessor from './pages/Professores/Calendário';
 import ConfiguracoesProfessor from './pages/Professores/Configurações';
+<<<<<<< HEAD
 import RelatoriosProfessor from './pages/Professores/RelatóriosProfessor';
+=======
+import  RelatoriosProfessor from './pages/Professores/RelatóriosProfessor';
+>>>>>>> 36c1b7b6466b0752465598448f3ffcf02bb15126
 import MeuDesempenhoAluno from './pages/Alunos/MeuDesempenho';
 import MeuComportamentoAluno from './pages/Alunos/MeuComportamento';
 import NotificacoesAluno from './pages/Alunos/Notificações';
@@ -61,7 +68,10 @@ return (
         <Route path="/blog" element={<Blog />} />
         <Route path="/sobre" element={<Sobre />} />
         <Route path="/aluno-professor" element={<AlunoProfessor />} />
+<<<<<<< HEAD
         <Route path="/aluno-professor2" element={<AlunoProfessor2/>} />
+=======
+>>>>>>> 36c1b7b6466b0752465598448f3ffcf02bb15126
         <Route path="/mais-informacoes" element={<Informação />} />
         <Route path="/professor" element={<Professor/>} />
         <Route path="/Cadastro-professor" element={<CadastroProfessor/>} />

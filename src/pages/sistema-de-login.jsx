@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import Logo from '../assets/Logo.png';
 import { FaChalkboardTeacher, FaUserGraduate } from 'react-icons/fa';
 
@@ -21,6 +22,20 @@ const Login = ({ onClose }) => {
           &times;
         </button>
 
+=======
+import Logo from '../assets/Logo.png'; // Substitua pelo caminho do seu logo
+import { FaChalkboardTeacher, FaUserGraduate, FaHome } from 'react-icons/fa';
+
+const Login = () => {
+  return (
+    <div className="flex items-center justify-center min-h-screen bg-purple-900 p-4">
+      <motion.div
+        className="bg-white shadow-lg rounded-lg p-8 w-full max-w-sm text-center"
+        initial={{ opacity: 0, y: -20 }} // Estado inicial da animação
+        animate={{ opacity: 1, y: 0 }} // Estado final da animação
+        transition={{ duration: 0.5 }} // Duração da animação
+      >
+>>>>>>> 36c1b7b6466b0752465598448f3ffcf02bb15126
         {/* Logotipo */}
         <img
           src={Logo}
@@ -34,6 +49,18 @@ const Login = ({ onClose }) => {
           <span className="text-lg font-normal">Conta tudo :)</span>
         </h2>
 
+<<<<<<< HEAD
+=======
+        {/* Botão Voltar para Home */}
+        <Link
+          to="/"
+          className="flex items-center justify-center p-4 bg-gray-300 text-black rounded-lg shadow-md mb-4 hover:bg-gray-400 transition"
+        >
+          <FaHome className="mr-2" />
+          Voltar para Home
+        </Link>
+
+>>>>>>> 36c1b7b6466b0752465598448f3ffcf02bb15126
         {/* Opções de Login */}
         <div className="flex flex-col space-y-4">
           <Link

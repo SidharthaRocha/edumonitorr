@@ -67,7 +67,11 @@ const Professor = () => {
         transition={{ duration: 0.5 }}
       >
         {/* Link de Voltar */}
+<<<<<<< HEAD
         <Link to="/aluno-professor2" className="flex items-center text-purple-600 mb-4 hover:underline">
+=======
+        <Link to="/aluno-professor" className="flex items-center text-purple-600 mb-4 hover:underline">
+>>>>>>> 36c1b7b6466b0752465598448f3ffcf02bb15126
           <FaArrowLeft className="mr-2" />
           Voltar
         </Link>

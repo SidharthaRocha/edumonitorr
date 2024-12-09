@@ -10,12 +10,18 @@ import './css/LargeImageComponent.css';
 import './css/TitleWithImage.css';
 import Carousel from './components/carousel';
 import Footer from './components/Footer';
+<<<<<<< HEAD
 import Login from './pages/sistema-de-login'; // Importando o modal de login
+=======
+>>>>>>> 36c1b7b6466b0752465598448f3ffcf02bb15126
 
 function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 768);
+<<<<<<< HEAD
   const [isLoginModalOpen, setLoginModalOpen] = useState(false); // Estado para o modal de login
+=======
+>>>>>>> 36c1b7b6466b0752465598448f3ffcf02bb15126
 
   useEffect(() => {
     const handleResize = () => setIsDesktop(window.innerWidth > 768);
@@ -71,6 +77,7 @@ function Home() {
           </div>
         </div>
         <div className="md:flex items-center">
+<<<<<<< HEAD
           {/* Atualizamos este botão para abrir o modal de login */}
           <button
             onClick={() => setLoginModalOpen(true)}
@@ -78,6 +85,11 @@ function Home() {
           >
             Login
           </button>
+=======
+          <Link to="/aluno-professor" className="bg-purple-700 text-white rounded-full px-6 py-3 transition-colors duration-200 hover:bg-purple-800">
+            Login
+          </Link>
+>>>>>>> 36c1b7b6466b0752465598448f3ffcf02bb15126
         </div>
         <div className="md:hidden">
           <button onClick={toggleMenu} className="text-purple-700">
@@ -157,9 +169,12 @@ function Home() {
         )}
       </div>
 
+<<<<<<< HEAD
       {/* Login Modal */}
       {isLoginModalOpen && <Login onClose={() => setLoginModalOpen(false)} />}
 
+=======
+>>>>>>> 36c1b7b6466b0752465598448f3ffcf02bb15126
       <Carousel />
       <Footer />
     </div>
