@@ -6,7 +6,7 @@ import { FaChalkboardTeacher, FaUserGraduate, FaHome } from 'react-icons/fa';
 
 const Login2 = ({ onClose }) => {
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-50">
+    <div className="fixed inset-0 flex items-center justify-center bg-purple-900 bg-opacity-95 z-50">
       <motion.div
         className="bg-white shadow-lg rounded-lg p-8 w-full max-w-sm text-center relative"
         initial={{ opacity: 0, y: -20 }}

@@ -10,18 +10,12 @@ import './css/LargeImageComponent.css';
 import './css/TitleWithImage.css';
 import Carousel from './components/carousel';
 import Footer from './components/Footer';
-<<<<<<< HEAD
 import Login from './pages/sistema-de-login'; // Importando o modal de login
-=======
->>>>>>> 36c1b7b6466b0752465598448f3ffcf02bb15126
 
 function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 768);
-<<<<<<< HEAD
   const [isLoginModalOpen, setLoginModalOpen] = useState(false); // Estado para o modal de login
-=======
->>>>>>> 36c1b7b6466b0752465598448f3ffcf02bb15126
 
   useEffect(() => {
     const handleResize = () => setIsDesktop(window.innerWidth > 768);
@@ -77,7 +71,6 @@ function Home() {
           </div>
         </div>
         <div className="md:flex items-center">
-<<<<<<< HEAD
           {/* Atualizamos este botão para abrir o modal de login */}
           <button
             onClick={() => setLoginModalOpen(true)}
@@ -85,11 +78,6 @@ function Home() {
           >
             Login
           </button>
-=======
-          <Link to="/aluno-professor" className="bg-purple-700 text-white rounded-full px-6 py-3 transition-colors duration-200 hover:bg-purple-800">
-            Login
-          </Link>
->>>>>>> 36c1b7b6466b0752465598448f3ffcf02bb15126
         </div>
         <div className="md:hidden">
           <button onClick={toggleMenu} className="text-purple-700">
@@ -119,7 +107,7 @@ function Home() {
           <p className="mt-6 text-lg md:text-xl">
             Com nossa plataforma de monitoria online, os pais podem acompanhar o progresso escolar dos alunos em tempo real. Receba atualizações instantâneas e interaja com os professores de forma prática e rápida!
           </p>
-          <Link to="/mais-informacoes" className="mt-8 inline-block bg-yellow-400 text-purple-800 font-semibold py-2 px-6 rounded-full hover:bg-yellow-500 transition-colors">
+          <Link to="/desenvolvimento" className="mt-8 inline-block bg-yellow-400 text-purple-800 font-semibold py-2 px-6 rounded-full hover:bg-yellow-500 transition-colors">
             Saiba Mais
           </Link>
         </div>
@@ -135,24 +123,22 @@ function Home() {
             Como Funciona a Monitoria Online
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-4 md:px-0">
-            {cards.map((card, index) => (
-              <div
-                key={index}
-                className="bg-white p-8 rounded-lg shadow-lg hover:scale-105 hover:shadow-2xl transition-transform"
-              >
-                <img
-                  src={card.imgSrc}
-                  alt={card.title}
-                  className="w-full h-64 object-cover rounded-lg mb-6 cursor-pointer"
-                  onClick={() => handleImageClick(card.imgSrc)}
-                />
-                <h3 className="text-xl font-semibold text-purple-800 mb-4">{card.title}</h3>
-                <p className="text-gray-700 mb-4">{card.text}</p>
-                <Link to="/mais-informacoes" className="text-purple-800 font-semibold hover:text-yellow-500">
-                  Saiba Mais ⇨
-                </Link>
-              </div>
-            ))}
+          {cards.map((card, index) => (
+        <div
+          key={index}
+          className="bg-white p-8 rounded-lg shadow-lg hover:scale-105 hover:shadow-2xl transition-transform"
+        >
+          <img
+            src={card.imgSrc}
+            alt={card.title}
+            className="w-full h-64 object-cover rounded-lg mb-6 cursor-pointer"
+            onClick={() => handleImageClick(card.imgSrc)}
+          />
+          <h3 className="text-xl font-semibold text-purple-800 mb-4">{card.title}</h3>
+          <p className="text-gray-700 mb-4">{card.text}</p>
+          {/* Removido o "Saiba Mais" com Link */}
+        </div>
+      ))}
           </div>
         </div>
 
@@ -169,12 +155,9 @@ function Home() {
         )}
       </div>
 
-<<<<<<< HEAD
       {/* Login Modal */}
       {isLoginModalOpen && <Login onClose={() => setLoginModalOpen(false)} />}
 
-=======
->>>>>>> 36c1b7b6466b0752465598448f3ffcf02bb15126
       <Carousel />
       <Footer />
     </div>

@@ -36,21 +36,12 @@ const Footer = () => {
         <div className="flex flex-col items-center mb-4 md:mb-0">
           <h2 className="font-bold text-lg mb-2 text-center">Fala com a Gente</h2>
           <div className="flex items-center space-x-1"> {/* Reduced space between icon and text */}
-<<<<<<< HEAD
             <img src={email} alt="E-mail" className="h-10 w-auto" /> {/* Reduced height for email icon */}
             <span className="text-sm">contato@edimonitor.com</span>
           </div>
           <div className="flex w-full items-center justify-start space-x-1"> {/* Reduced space between icon and text */}
             <img src={Whatsapp} alt="WhatsApp" className="  h-10 w-auto" /> {/* Reduced height for WhatsApp icon */}
             <span className="  text-sm">+55 11 91234-5678</span>
-=======
-            <img src={email} alt="E-mail" className="h-12 w-auto" /> {/* Reduced height for email icon */}
-            <span className="text-sm">contato@edimonitor.com</span>
-          </div>
-          <div className="flex items-center space-x-1"> {/* Reduced space between icon and text */}
-            <img src={Whatsapp} alt="WhatsApp" className="h-12 w-auto" /> {/* Reduced height for WhatsApp icon */}
-            <span className="text-sm">+55 11 91234-5678</span>
->>>>>>> 36c1b7b6466b0752465598448f3ffcf02bb15126
           </div>
         </div>
       </div>
