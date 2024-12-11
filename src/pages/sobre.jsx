@@ -68,35 +68,35 @@ const Sobre = () => {
         </div>
       </div>
 
-   {/* Mobile Menu */}
+  {/* Mobile Menu */}
 {isMenuOpen && (
-  <div className="fixed inset-0 bg-white z-50 flex flex-col items-center justify-center space-y-2 p-2">
+  <div className="fixed inset-0 bg-white z-50 flex flex-col items-center justify-center md:hidden">
     <button
       onClick={() => setIsMenuOpen(false)}
-      className="absolute top-2 right-2 text-xl text-purple-700 hover:text-purple-900 transition-colors duration-200"
+      className="absolute top-6 right-6 text-2xl text-purple-700 hover:text-purple-900 transition-colors duration-200"
     >
       &times;
     </button>
 
-    <nav className="flex flex-col items-center space-y-2">
+    <nav className="flex flex-col items-center space-y-8">
       <Link
         to="/"
         onClick={() => setIsMenuOpen(false)}
-        className="text-purple-700 text-lg font-poppins font-medium hover:bg-purple-800 hover:text-white px-3 py-1 rounded"
+        className="text-purple-700 text-2xl font-poppins font-semibold hover:bg-purple-800 hover:text-white px-6 py-2 rounded"
       >
         Home
       </Link>
       <Link
         to="/blog"
         onClick={() => setIsMenuOpen(false)}
-        className="text-purple-700 text-lg font-poppins font-medium hover:bg-purple-800 hover:text-white px-3 py-1 rounded"
+        className="text-purple-700 text-2xl font-poppins font-semibold hover:bg-purple-800 hover:text-white px-6 py-2 rounded"
       >
         Blog
       </Link>
       <Link
         to="/sobre"
         onClick={() => setIsMenuOpen(false)}
-        className="text-purple-700 text-lg font-poppins font-medium hover:bg-purple-800 hover:text-white px-3 py-1 rounded"
+        className="text-purple-700 text-2xl font-poppins font-semibold hover:bg-purple-800 hover:text-white px-6 py-2 rounded"
       >
         Sobre
       </Link>
