@@ -3,9 +3,20 @@ import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
 import Logo from '../assets/Logo.png';
 import { FaBookOpen, FaComments, FaCalendarAlt, FaChartLine, FaUsers } from 'react-icons/fa';
+import Login from './sistema-de-login';
+
 
 const Sobre = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+  const openLoginModal = () => {
+    setIsLoginModalOpen(true);
+  };
+
+  const closeLoginModal = () => {
+    setIsLoginModalOpen(false);
+  };
+
 
   return (
     <div className="flex flex-col min-h-screen bg-gray-100">
@@ -34,15 +45,12 @@ const Sobre = () => {
             </Link>
           </div>
         </div>
-
-        <div className="md:flex items-center">
-          <Link
-            to="/aluno-professor"
-            className="bg-purple-700 text-white rounded-full px-6 py-3 transition-colors duration-200 hover:bg-purple-800"
+        <button
+            onClick={openLoginModal}
+            className="bg-purple-700 text-white rounded-full px-6 py-3 hover:bg-purple-800"
           >
             Login
-          </Link>
-        </div>
+          </button>
 
         {/* Mobile Menu Button */}
         <div className="md:hidden">
@@ -168,6 +176,8 @@ const Sobre = () => {
             </p>
           </section>
         </div>
+        {isLoginModalOpen && <Login onClose={closeLoginModal} />}
+
       </main>
 
       {/* Footer */}

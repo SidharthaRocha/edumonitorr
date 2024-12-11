@@ -7,6 +7,8 @@ import Reunião from '../assets/reuniao_pais_escola.png';
 import Estudante from '../assets/estudando.png';
 import Aluno1 from '../assets/aluno.png';
 import Aluno2 from '../assets/aluna.png';
+import Login from './sistema-de-login'; // Importando o modal de login
+
 
 const posts = [
   {
@@ -49,6 +51,8 @@ const Bloguer = () => {
   const [modalImage, setModalImage] = useState(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+
 
   const openModal = (image) => {
     setModalImage(image);
@@ -60,6 +64,13 @@ const Bloguer = () => {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+  const openLoginModal = () => {
+    setIsLoginModalOpen(true);
+  };
+
+  const closeLoginModal = () => {
+    setIsLoginModalOpen(false);
   };
 
   useEffect(() => {
@@ -79,9 +90,12 @@ const Bloguer = () => {
             <Link to="/sobre" className="text-purple-700 hover:bg-purple-800 hover:text-white px-4 py-2 rounded">Sobre</Link>
           </div>
         </div>
-        <div className="md:flex items-center">
-          <Link to="/aluno-professor" className="bg-purple-700 text-white rounded-full px-6 py-3 hover:bg-purple-800">Login</Link>
-        </div>
+        <button
+            onClick={openLoginModal}
+            className="bg-purple-700 text-white rounded-full px-6 py-3 hover:bg-purple-800"
+          >
+            Login
+          </button>
         <div className="md:hidden">
           <button onClick={toggleMenu} className="text-purple-700">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -172,6 +186,8 @@ const Bloguer = () => {
             <img src={modalImage} alt="Imagem ampliada" className="max-w-full max-h-full object-contain" />
           </div>
         )}
+        {isLoginModalOpen && <Login onClose={closeLoginModal} />}
+
       </main>
 
       <Footer />
