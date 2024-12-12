@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { FaBell, FaCheckCircle } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+import { FaBell, FaCheckCircle, FaArrowLeft } from 'react-icons/fa';
 
 const notificacoesData = [
   { id: 1, titulo: 'Nota de Matemática', descricao: 'Sua nota na prova de Matemática foi publicada. Confira no seu desempenho!', lida: false },
@@ -22,6 +23,17 @@ const Notificacoes = () => {
   return (
     <div className="min-h-screen bg-gradient-to-r from-blue-100 to-purple-200 py-12 px-6 sm:px-8 lg:px-12">
       <div className="max-w-7xl mx-auto">
+        {/* Botão de Voltar */}
+        <div className="mb-6">
+          <Link
+            to="/Dashboard-aluno"
+            className="inline-flex items-center text-[#4c3c92] font-semibold text-lg bg-white px-4 py-2 rounded-full shadow-md hover:bg-[#4c3c92] hover:text-white transition-all duration-300 ease-in-out transform hover:scale-105"
+          >
+            <FaArrowLeft className="mr-2" />
+            Voltar
+          </Link>
+        </div>
+
         {/* Título da Página */}
         <h1 className="text-5xl font-extrabold text-[#4c3c92] text-center mb-12 animate__animated animate__fadeIn">
           Minhas Notificações
@@ -66,6 +78,6 @@ const Notificacoes = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Notificacoes;
