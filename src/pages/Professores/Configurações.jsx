@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { FaArrowLeft } from 'react-icons/fa';
 
 const ConfiguracoesProfessor = () => {
@@ -13,6 +13,8 @@ const ConfiguracoesProfessor = () => {
     email: true,
     sms: false,
   });
+
+  const navigate = useNavigate();
 
   // Função para salvar perfil
   const handleSaveProfile = () => {
@@ -30,12 +32,13 @@ const ConfiguracoesProfessor = () => {
     <div className="min-h-screen bg-gray-100 font-poppins p-6">
       {/* Botão de Voltar */}
       <div className="mb-4">
-        <Link
-          to="/Dashboard-professor" // Substitua pelo caminho para onde o botão deve redirecionar
-          className="flex items-center text-indigo-600 hover:text-indigo-800 font-semibold"
+        <button
+          onClick={() => navigate(-1)}
+          className="flex items-center px-4 py-2 bg-gray-200 rounded-lg text-indigo-600 hover:bg-gray-300 hover:text-indigo-800 transition duration-200"
         >
-          <FaArrowLeft className="mr-2" /> Voltar
-        </Link>
+          <FaArrowLeft className="mr-2" />
+          Voltar
+        </button>
       </div>
 
       <h1 className="text-3xl font-bold text-indigo-800 mb-6">Configurações</h1>
@@ -45,7 +48,9 @@ const ConfiguracoesProfessor = () => {
         <button
           onClick={() => setActiveTab('perfil')}
           className={`text-lg font-semibold ${
-            activeTab === 'perfil' ? 'text-indigo-600 border-b-2 border-indigo-600' : 'text-gray-500'
+            activeTab === 'perfil'
+              ? 'text-indigo-600 border-b-2 border-indigo-600'
+              : 'text-gray-500 hover:text-indigo-600'
           }`}
         >
           Editar Perfil
@@ -53,7 +58,9 @@ const ConfiguracoesProfessor = () => {
         <button
           onClick={() => setActiveTab('notificacoes')}
           className={`text-lg font-semibold ${
-            activeTab === 'notificacoes' ? 'text-indigo-600 border-b-2 border-indigo-600' : 'text-gray-500'
+            activeTab === 'notificacoes'
+              ? 'text-indigo-600 border-b-2 border-indigo-600'
+              : 'text-gray-500 hover:text-indigo-600'
           }`}
         >
           Configurar Notificações

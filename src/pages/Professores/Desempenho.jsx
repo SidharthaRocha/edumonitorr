@@ -73,13 +73,13 @@ export default function Desempenho() {
 
   return (
     <div className="p-6">
-      {/* Ícone de Voltar com React Router DOM */}
+      {/* Ícone de Voltar estilizado */}
       <div className="flex items-center mb-4">
         <button
           onClick={() => navigate("/Dashboard-professor")}
-          className="text-blue-500 hover:text-blue-700 flex items-center"
+          className="flex items-center text-white bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-lg shadow-md transition-all duration-300 ease-in-out"
         >
-          <FaArrowLeft size={20} className="mr-2" /> Voltar
+          <FaArrowLeft className="mr-2" size={20} /> Voltar
         </button>
       </div>
 

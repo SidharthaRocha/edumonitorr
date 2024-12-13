@@ -37,23 +37,22 @@ const Notificacoes = () => {
 
   return (
     <div className="p-6 bg-gray-100 min-h-screen font-poppins">
-      {/* Ícone de Voltar */}
-      <button
-        onClick={() => navigate(-1)} // Voltar à página anterior
-        className="flex items-center text-purple-800 hover:text-purple-600 mb-6"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-6 w-6 mr-2"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-        </svg>
-        Voltar
-      </button>
-
+      {/* Ícone de Voltar estilizado */}
+<button
+  onClick={() => navigate(-1)} // Voltar à página anterior
+  className="flex items-center px-4 py-2 bg-gray-200 rounded-lg text-purple-800 hover:bg-gray-300 hover:text-purple-600 transition duration-200 mb-6"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className="h-6 w-6 mr-2"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+  </svg>
+  Voltar
+</button>
       <h1 className="text-3xl font-bold text-purple-900 mb-8 text-center">Gerenciar Notificações</h1>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">

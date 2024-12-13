@@ -62,12 +62,16 @@ export default function AlunosList() {
 
   return (
     <div className="p-6">
-      <div className="flex items-center mb-4">
-  {/* Botão de Voltar com ícone de setinha */}
-  <Link to="/Dashboard-professor" className="mr-1 text-blue-500 hover:text-blue-700 flex items-center">
-    <FaArrowLeft size={20} className="mr-2" /> 
+    <div className="flex items-center mb-4">
+  {/* Botão de Voltar estilizado */}
+  <Link
+    to="/Dashboard-professor"
+    className="text-blue-500 hover:text-blue-700 flex items-center px-4 py-2 bg-gray-200 rounded hover:bg-gray-300 transition duration-200"
+  >
+    <FaArrowLeft size={20} className="mr-2" />
+    Voltar
   </Link>
-  <h1 className="text-2xl font-bold">Lista de Alunos</h1>
+  <h1 className="text-2xl font-bold ml-4">Lista de Alunos</h1>
 </div>
       {/* Botão de Adicionar Aluno */}
       <button

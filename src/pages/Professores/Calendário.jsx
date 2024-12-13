@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'; // Alterado para usar 'useNavigate'
 import Calendar from 'react-calendar'; // Biblioteca do calendário
 import 'react-calendar/dist/Calendar.css'; // Estilo do calendário
-import { FaArrowLeft, FaPlus } from 'react-icons/fa';
+import { FaPlus } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 const Calendario = () => {
@@ -13,6 +13,8 @@ const Calendario = () => {
   const [eventDate, setEventDate] = useState('');
   const [reminder, setReminder] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const navigate = useNavigate(); // Hook para navegação
 
   // Função para adicionar um novo evento
   const addEvent = () => {
@@ -37,11 +39,22 @@ const Calendario = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          {/* Link de Voltar */}
-          <Link to="/Dashboard-professor" className="flex items-center text-purple-600 mb-4 hover:underline">
-            <FaArrowLeft className="mr-2" />
+          {/* Botão de Voltar */}
+          <button
+            onClick={() => navigate(-1)}
+            className="flex items-center px-4 py-2 bg-gray-200 rounded-lg text-purple-800 hover:bg-gray-300 hover:text-purple-600 transition duration-200 mb-6"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6 mr-2"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
             Voltar
-          </Link>
+          </button>
 
           {/* Título */}
           <h2 className="text-3xl font-semibold mb-4 text-purple-900">Calendário de Eventos</h2>
